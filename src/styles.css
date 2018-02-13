@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html { background-color: #efefef }
+/* mat-card-title{background-color: lightcoral;
+                color: ivory;
+                height: 50px;
+                padding-top: -5px;
+                } */

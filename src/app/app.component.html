@@ -1,0 +1,80 @@
+<form class="example-form">
+  <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark bg-teal darken-4 scrolling-navbar" [containerInside]="true">
+    <logo>
+        <a class="logo navbar-brand" href="#"><strong>Navbar</strong></a>
+    </logo>
+    <links>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active waves-light" mdbRippleRadius>
+                <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item waves-light" mdbRippleRadius>
+                <a class="nav-link">Features</a>
+            </li>
+            <li class="nav-item waves-light" mdbRippleRadius>
+                <a class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item waves-light" mdbRippleRadius>
+                <a class="nav-link">Opinions</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item waves-light" mdbRippleRadius>
+                <a class="nav-link"><i class="fa fa-facebook"></i></a>
+            </li>
+            <li class="nav-item waves-light" mdbRippleRadius>
+                <a class="nav-link"><i class="fa fa-twitter"></i></a>
+            </li>
+            <li class="nav-item waves-light" mdbRippleRadius>
+                <a class="nav-link"><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+    </links>
+  </mdb-navbar>
+  <!-- NavBar Ends Here -->
+
+  <mat-card class="mycard"> 
+    <mat-card-title ><h1 class="display-1">First Card</h1></mat-card-title><br>
+      <mat-checkbox>Subscribe newsletter</mat-checkbox><br>
+
+      <section>
+          <mat-checkbox name= "checkbox"[(ngModel)]="isChecked">Checked</mat-checkbox>
+          <mat-slide-toggle [checked]="isChecked">Slide me</mat-slide-toggle>
+      </section>
+
+      <!-- <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/ipad-portfolio2.png" alt="" class="img-fluid z-depth-0 animated bounce infinite"> -->
+        <br>
+
+        <tag-input [ngModel]=users name="mytag" [identifyBy]="'id'" [displayBy]="'name'">
+            <tag-input-dropdown [autocompleteItems]="requestAutocompleteItems"  [identifyBy]='"id"' [displayBy]='"name"'>
+            </tag-input-dropdown>
+     </tag-input>
+
+
+        <br>
+        <button type="button" class="btn btn-outline-success" mdbRippleRadius (click)="getUserList()">Success</button>
+        <button type="button" class="btn peach-gradient btn-lg waves-light" mdbRippleRadius>Large button</button>
+        <!-- <mat-card > 
+          <mat-card-title>Second Card</mat-card-title><br>
+          <mat-checkbox>Subscribe newsletter</mat-checkbox><br>
+      
+            <section>
+                <mat-checkbox name= "checkbox"[(ngModel)]="isChecked">Checked</mat-checkbox>
+                <mat-slide-toggle [checked]="isChecked">Slide me</mat-slide-toggle>
+            </section>
+            <br>
+            <input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                  {{ option }}
+                </mat-option>
+              </mat-autocomplete>
+
+
+        </mat-card>  -->
+  </mat-card>
+  
+
+  
+</form>
+
